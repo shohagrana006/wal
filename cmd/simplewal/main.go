@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/shohagrana006/wal/internal/wal"
+	"github.com/shohagrana006/simplewal/internal/wal"
 )
 
 func main(){
