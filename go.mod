@@ -1,10 +1,9 @@
-module github.com/shohagrana006/wal
+module github.com/shohagrana006/simplewal
 
-go 1.23
-
-toolchain go1.23.9
+go 1.24.3
 
 require (
+	github.com/shohagrana006/wal v0.0.0-20250522060857-9d7cf31279f5
 	google.golang.org/grpc v1.72.1
 	google.golang.org/protobuf v1.36.6
 )

@@ -1,8 +1,15 @@
-load("@rules_go//go:def.bzl", "go_binary")
+load("@rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "simplewal_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/shohagrana006/simplewal/cmd/simplewal",
+    visibility = ["//visibility:private"],
+    deps = ["@com_github_shohagrana006_wal//internal/wal"],
+)
 
 go_binary(
     name = "simplewal",
-    srcs = ["main.go"],
-    importpath = "simplewal/cmd/simplewal",
-    deps = ["//internal/wal:wal_lib"],
+    embed = [":simplewal_lib"],
+    visibility = ["//visibility:public"],
 )
