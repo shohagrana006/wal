@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "simplewal/pkg/api/user;userproto";
+
+message UserRequest {
+  string name = 1;
+  string email = 2;
+}
+
+message UserResponse {
+  string name = 1;
+  string email = 2;
+}
